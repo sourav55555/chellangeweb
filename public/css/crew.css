@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@0;1&family=Bitter:wght@200;400;500&family=Cinzel+Decorative:wght@400;700&family=Libre+Baskerville&family=Open+Sans+Condensed:ital,wght@0,300;1,300&family=Quicksand:wght@300&family=Raleway:ital,wght@0,100;0,200;0,300;1,300&family=Saira+Condensed:wght@100;200;400&family=Source+Serif+Pro:wght@200;300;400&family=Yeseva+One&display=swap');
+body{
+    background-image: url('/assets/crew/background-crew-desktop.jpg');
+    height: 110%;
+    width: 100%;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+.navbar{
+   
+}
+.navbar-toggler{
+    background-image: url(/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: all .8s;
+}
+.navbar-toggler:focus{
+    background-image: url(/assets/shared/icon-close.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.navbar-toggler.collapsed{
+    background-image: url(/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+nav .home-icon{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 2rem;
+    margin-top:3rem;
+}
+.home-icon img{
+    height: 100%;
+    width: 100%;
+}
+nav .line{
+    width: 43%;
+    height: 0px;
+    border-top: .7px solid rgb(153, 151, 151);
+    margin-left: 3rem;
+    margin-top:3rem;
+}
+nav ul{
+    height: 6rem;
+    color: white;
+    position: relative;
+    width: auto;
+}
+nav ul::before{
+    content: "";
+    position: absolute;
+    background-image: url('/assets/crew/background-crew-desktop.jpg');
+    background-attachment: fixed;
+    filter: blur(11px);
+    height: 110%;
+    width: 100%;
+    z-index: 1;  
+  }
+nav ul li{
+    z-index: 2;
+    color: white;
+    display: grid;
+    place-items: center;
+    margin-left: 1rem;
+    margin-top: 3rem;
+}
+li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all .3s linear;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
+    z-index: 2;
+    letter-spacing: 1.7px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+ul li a span{
+  margin-right: .4rem;
+  padding: 0;
+  letter-spacing: 0;
+}
+.nav-link:hover{
+    color: white;
+}
+.nav-link{
+    color: white;
+    display: flex;
+}
+
+.crew-div{
+   margin-top: 3rem;
+}
+.crew-div .number{
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Saira Condensed', sans-serif;
+    letter-spacing: 2px;
+    margin-left: 5rem;
+}
+.crew-div .number span{
+    margin-right: 1rem;
+}
+.carousel-indicators{
+    justify-content: left;
+}
+.slide1{
+    width: 100%;
+    display: flex;
+}
+.slide1 .crew-details{
+   margin-left: 5rem;
+   width: 50%;
+   color: white;
+   margin-top: 2.6rem;
+}
+.crew-details p:first-child{
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1.5px;
+}
+.crew-details p:nth-child(2){
+    font-size: 3.4pc;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.crew-details p:last-child{
+    font-size: 1rem;
+    text-align: left;
+    width: 70%;
+}
+.CREW-IMG{
+    width: 48%;
+    height: 90%;
+}
+.CREW-IMG img{
+    width: 70%;
+    height: 29.5rem
+}
+.slide ol{
+    margin-bottom: 3.3rem;
+    justify-content: left;
+}
+
+@media (max-width:992px) {
+    body{
+        height: 100vh;
+        width: 100vw;
+        background-image: url("/assets/crew/background-crew-tablet.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+    }
+    nav .line{
+        display: none;
+    }
+    nav .home-icon{
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-left: 3rem;
+        margin-top:1.5rem;
+    }
+    nav ul{
+        justify-content: right;
+        width: 100%;
+        margin-left: 2rem;
+    }
+    nav ul li{
+        margin-right: 1rem;
+    }
+    ul li a{
+        font-size: 1rem;
+    }
+    ul li a span{
+        display: none;
+      }
+    .slide1{
+        flex-direction: column;
+    }
+    .slide1 .crew-details{
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 2.6rem;
+        margin-left: 0;
+    }
+    .CREW-IMG{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.4rem;
+    }
+    .CREW-IMG img{
+        width: auto;
+        height: 27.5rem;
+    }
+    .crew-details p:last-child{
+        font-size: 1rem;
+        margin: auto;
+        text-align: center;
+        width: 70%;
+    }
+}
+
+@media (max-width:768px) {
+    body{
+        background-image: url("/assets/crew/background-crew-mobile.jpg");
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+    }
+    nav .home-icon{
+        width: 3.1rem;
+        height: 3.1rem;
+        margin-left: 2.7rem;
+        margin-top:2rem;
+    }
+    nav .line{
+        display: none;
+    }
+    nav .navbar-nav{
+       height: auto;
+    }
+    nav .navbar-nav{
+        margin: 0;
+    }
+    nav ul li{
+        height: 0rem;
+    }
+    .navbar-toggler{
+        height: 1.3rem;
+        width: auto;
+        margin-right: 2rem;
+    }
+    .slide1 .crew-details{
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-top: 2.6rem;
+        margin-left: 0;
+    }
+    .CREW-IMG{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.4rem;
+    }
+    .CREW-IMG img{
+        width: auto;
+        height: 22.5rem;
+    }
+    .crew-details p:last-child{
+        font-size: 1rem;
+        margin: auto;
+        text-align: center;
+        width: 90%;
+    }
+    
+}

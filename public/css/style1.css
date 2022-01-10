@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@0;1&family=Bitter:wght@200;400;500&family=Open+Sans+Condensed:ital,wght@0,300;1,300&family=Saira+Condensed:wght@100;200;400&display=swap');
+
+body{
+    background-image: url('/assets/home/background-home-desktop.jpg');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navbar{
+   
+}
+.navbar-toggler{
+    background-image: url(/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: all .8s;
+}
+.navbar-toggler:focus{
+    background-image: url(/assets/shared/icon-close.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.navbar-toggler.collapsed{
+    background-image: url(/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+nav .home-icon{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 2rem;
+    margin-top:3rem;
+}
+.home-icon img{
+    height: 100%;
+    width: 100%;
+}
+nav .line{
+    width: 43%;
+    height: 0px;
+    border-top: .7px solid rgb(153, 151, 151);
+    margin-left: 3rem;
+    margin-top:3rem;
+}
+nav ul{
+    height: 6rem;
+    color: white;
+    position: relative;
+    width: auto;
+}
+nav ul::before{
+    content: "";
+    position: absolute;
+    background-image: url('/assets/home/background-home-desktop.jpg');
+    background-attachment: fixed;
+    filter: blur(11px);
+    height: 110%;
+    width: 100%;
+    z-index: 1;  
+  }
+nav ul li{
+    z-index: 2;
+    color: white;
+    display: grid;
+    place-items: center;
+    margin-left: 1rem;
+    margin-top: 3rem;
+}
+li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all .3s linear;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
+    z-index: 2;
+    letter-spacing: 1.7px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+ul li a span{
+  margin-right: .4rem;
+  padding: 0;
+  letter-spacing: 0;
+}
+.nav-link:hover{
+    color: white;
+}
+.nav-link{
+    color: white;
+    display: flex;
+}
+.contents-texts{
+    display: flex;
+}
+.texts{
+    padding-top: 4rem;
+    padding-left: 7rem;
+    padding-right: 5rem;
+    margin-top: 2.6rem;
+    width: 50%;
+ }
+ .texts p:first-child{
+     font-size: 1.2rem;
+     color: white;
+     font-family: 'Open Sans Condensed', sans-serif;
+     letter-spacing: 3px;
+     font-weight: 700;
+ }
+ .texts p:first-child .space{
+     font-size: 6.3pc;
+     color: white;
+     display: block;
+     letter-spacing: 3px;
+     font-family: 'Bitter', serif;
+     font-weight: 400;
+ }
+ .texts p:last-child{
+     color: rgb(179, 177, 177);
+     font-size: 1rem;
+ }
+ .round{
+    width: 40%;
+    position: relative;
+}
+
+.round p{
+   position: absolute;
+   width: 11rem;
+   height: 11rem;
+   background-color: white;
+   border-radius: 50%;
+   top: 13rem;
+   right: 4rem;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   font-size: 1.5rem;
+   font-family: 'Bitter', serif;
+   cursor: pointer;
+}
+
+@media (max-width:992px) {
+    body{
+        height: 100vh;
+        width: 100vw;
+        background-image: url('/assets/home/background-home-tablet.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 0;
+        margin: 0;
+    }
+    nav .line{
+        display: none;
+    }
+    nav .home-icon{
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-left: 3rem;
+        margin-top:1.5rem;
+    }
+    nav ul{
+        justify-content: right;
+        width: 100%;
+        margin-left: 2rem;
+    }
+    nav ul li{
+        margin-right: 1rem;
+    }
+    ul li a{
+        font-size: 1rem;
+    }
+    ul li a span{
+        display: none;
+      }
+    .contents-texts{
+        display: block;
+    }
+    .texts{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-top: 0rem;
+        padding: 3rem 7rem;
+    }
+    .texts p:last-child{
+        width: 70%;
+        margin: auto;
+    }
+    .round{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin-top: 6rem;
+    }
+    .round p{
+        position: unset;
+    }
+}
+@media (max-width:768px) {
+    body{
+        background-image: url(/assets/home/background-home-mobile.jpg);
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+    }
+    nav .home-icon{
+        width: 3.1rem;
+        height: 3.1rem;
+        margin-left: 2.7rem;
+        margin-top:2rem;
+    }
+    nav .line{
+        display: none;
+    }
+    nav .navbar-nav{
+       height: auto;
+    }
+    .navbar-toggler{
+        height: 1.3rem;
+        width: auto;
+        margin-right: 2rem;
+    }
+    .texts{
+        padding: 0rem; 
+        margin-top: 3rem;
+     }
+     .texts p:first-child .space{
+         font-size: 5.3pc;
+     }
+     .texts p:last-child{
+        width: 84%;
+        margin: auto;
+    }
+
+    .round{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin-top: 9rem;
+    }
+    .round p{
+        position: unset;
+    }
+}

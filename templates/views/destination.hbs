@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--FONT AWESOME LINK-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha383-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!--CSS Link-->
+        <link rel="stylesheet" href="/css/destination.css">
+        <!--light-slider.css------------->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css">
+        <!--Jquery-------------------->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+        <!--lightslider.js--------------->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.js"></script>
+        <!--Font-->
+     </head>
+     <!--
+       font-family: 'Archivo Narrow', sans-serif;
+
+    font-family: 'Bitter', serif;
+
+    font-family: 'Cinzel Decorative', cursive;
+
+    font-family: 'Open Sans Condensed', sans-serif;
+
+    font-family: 'Saira Condensed', sans-serif;
+
+    font-family: 'Yeseva One', cursive;
+     -->
+    <body>
+        <section>
+            {{>navbar}}
+        </section>
+        <section class="content">
+            <div class="pick">
+                <p>01</p>
+                <p>Pick Your destination</p>
+            </div>
+                <div class="destination-details">
+                   <div class="destination-nav">                     
+                    <form id="btn-select" action="" style="color: white;">
+                        <input
+                         type="radio" value="mars" class="hidebx" id="PlanetName1" onclick="ShowBtn('PlanetName',4)" name="PlanetNames">
+                        <label for="PlanetName1" class="select-btn active" 
+                        >MARS</label>
+
+                        <input type="radio" value="moon" class="hidebx" id="PlanetName2" onclick="ShowBtn('PlanetName',4)" name="PlanetNames">
+                        <label class="select-btn" for="PlanetName2">MOON</label>
+
+                        <input type="radio" value="europa" class="hidebx" id="PlanetName3" onclick="ShowBtn('PlanetName',4)" name="PlanetNames">
+                        <label class="select-btn" for="PlanetName3">EUROPA</label>
+
+                        <input type="radio" value="titan" class="hidebx" id="PlanetName4" onclick="ShowBtn('PlanetName',4)" name="PlanetNames">
+                        <label class="select-btn" for="PlanetName4">TITAN</label>
+                    </form>
+                   </div>
+                   <div class="description">
+                       <div class="des-1" id="PlanetName1Div" style="display: flex;">
+                         
+                        <div class="details5">
+                            <div class="mars-des">
+                                <p>MARS</p>
+                                <p>Don't forget to pack your  hiking boots. You'll need    them to tackle Olympus Mons,   the tallest Planetary mountain in our solar system.It's tow and a half times the size of Everest!</p>
+                             </div>
+                             <div class="hr-line"></div>
+                             <div class="distance-time">
+                               <div class="distance">
+                                <p>AVG. DISTANCE</p>
+                                <p>225 MIL. KM</p>
+                               </div>
+                                <div class="time">
+                                 <p>EST. TRAVLE TIME</p>
+                                 <P>9 MONTHS</P>
+                                </div>
+                             </div>
+                          </div>  
+                          <div class="img-div">
+                            <img src="/assets/destination/image-mars.webp" alt="">
+                        </div> 
+                        </div>
+
+                      <div class="des-1" id="PlanetName2Div" style="display: none;">
+                        <div class="details5">
+                        <div class="mars-des">
+                          <p>MOON</p>
+                          <p>The Moon is in synchronous rotation with Earth. Its near side is marked by large dark plains (volcanic ‘maria’) that fill the spaces between the bright ancient crustal highlands and the prominent impact craters.</p>
+                       </div>
+                       <div class="hr-line"></div>
+                       <div class="distance-time">
+                         <div class="distance">
+                          <p>AVG. DISTANCE</p>
+                          <p>0.4 MIL. KM</p>
+                         </div>
+                          <div class="time">
+                           <p>EST. TRAVLE TIME</p>
+                           <P>9 MONTHS</P>
+                          </div>
+                       </div>
+                      </div> 
+                       <div class="img-div">
+                        <img src="/assets/destination/image-moon.webp" alt="">
+                        </div> 
+                        
+                    </div>  
+
+                    <div class="des-1" id="PlanetName3Div" style="display: none;">
+                        <div class="details5">
+                        <div class="mars-des">
+                          <p>EUROPA</p>
+                          <p>The surface of Europa is frozen, covered with a layer of ice, but scientists think there is an ocean beneath the surface. The icy surface also makes the moon one of the most reflective in the solar system.  </p>
+                       </div>
+                       <div class="hr-line"></div>
+                       <div class="distance-time">
+                         <div class="distance">
+                          <p>AVG. DISTANCE</p>
+                          <p>628.3 MIL. KM</p>
+                         </div>
+                          <div class="time">
+                           <p>EST. TRAVLE TIME</p>
+                           <P>9 MONTHS</P>
+                          </div>
+                       </div>
+                      </div> 
+                       <div class="img-div">
+                        <img src="/assets/destination/image-europa.webp" alt="">
+                       </div> 
+                     
+                   </div>  
+
+                    <div class="des-1" id="PlanetName4Div" style="display: none;">
+                      <div class="details5">  
+                        <div class="mars-des">
+                          <p>TITAN</p>
+                          <p>Titan is bigger than Earth's moon, and larger than even the planet Mercury. This mammoth moon is the only moon in the solar system with a dense atmosphere, and it's the only world besides Earth that has standing bodies of liquid, including rivers, lakes and seas, on its surface.</p>
+                       </div>
+                       <div class="hr-line"></div>
+                       <div class="distance-time">
+                         <div class="distance">
+                          <p>AVG. DISTANCE</p>
+                          <p>1.2 MIL. KM</p>
+                         </div>
+                          <div class="time">
+                           <p>EST. TRAVLE TIME</p>
+                           <P>9 MONTHS</P>
+                          </div>
+                       </div>
+                       </div> 
+                       <div class="img-div">
+                        <img src="/assets/destination/image-titan.webp">
+                       </div> 
+                      
+                    </div>   
+                   </div>
+                </div>
+ 
+        </section>
+        <script>
+            function ShowBtn(idName,NumOfBtn){
+                for(x=1; x<=NumOfBtn; x++){
+                    CheckThisBtn = idName + x;
+                    ThisDiv=idName + x +'Div';
+                    if(document.getElementById(CheckThisBtn).checked){
+                        document.getElementById(ThisDiv).style.display="flex";
+                    }
+                    else{
+                        document.getElementById(ThisDiv).style.display="none";
+                    }
+                }
+                return false;
+            }
+
+                 // Get the container element
+        var btnContainer = document.getElementById("btn-select");
+        
+        // Get all buttons with class="btn" inside the container
+        var btns = btnContainer.getElementsByClassName("select-btn");
+        
+        // Loop through the buttons and add the active class to the         current/clicked button
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace("active", "");
+            this.className += " active";
+          });
+        } 
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+        <script src="app.js"></script>
+      </body>
+    </html>

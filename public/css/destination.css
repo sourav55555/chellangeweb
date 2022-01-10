@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@0;1&family=Bitter:wght@200;400;500&family=Cinzel+Decorative:wght@400;700&family=Open+Sans+Condensed:ital,wght@0,300;1,300&family=Saira+Condensed:wght@100;200;400&family=Yeseva+One&display=swap');
+
+body{
+    background-image: url(/assets/destination/background-destination-desktop.jpg);
+    height: 125vh;
+    width: 100%;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+.navbar{
+   
+}
+.navbar-toggler{
+    background-image: url(/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: all .8s;
+}
+.navbar-toggler:focus{
+    background-image: url(/assets/shared/icon-close.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.navbar-toggler.collapsed{
+    background-image: url(/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+nav .home-icon{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 2rem;
+    margin-top:3rem;
+}
+.home-icon img{
+    height: 100%;
+    width: 100%;
+}
+nav .line{
+    width: 43%;
+    height: 0px;
+    border-top: .7px solid rgb(153, 151, 151);
+    margin-left: 3rem;
+    margin-top:3rem;
+}
+nav ul{
+    height: 6rem;
+    color: white;
+    position: relative;
+    width: auto;
+}
+nav ul::before{
+    content: "";
+    position: absolute;
+    background-image: url('/assets/destination/background-destination-desktop.jpg');
+    background-attachment: fixed;
+    filter: blur(11px);
+    height: 110%;
+    width: 100%;
+    z-index: 1;  
+  }
+nav ul li{
+    z-index: 2;
+    color: white;
+    display: grid;
+    place-items: center;
+    margin-left: 1rem;
+    margin-top: 3rem;
+}
+li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all .3s linear;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
+    z-index: 2;
+    letter-spacing: 1.7px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+ul li a span{
+  margin-right: .4rem;
+  padding: 0;
+  letter-spacing: 0;
+}
+.nav-link:hover{
+    color: white;
+}
+.nav-link{
+    color: white;
+    display: flex;
+}
+.content{
+  margin-top: 4rem;
+}
+.content .pick{
+    display: flex;
+    margin-left: 2rem;  
+}
+.pick p{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: white;
+    margin-left: 1rem;
+}
+.content-details{
+    margin-top: 2rem;
+    display: flex;
+}
+.destination-img{
+
+}
+.img-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.destination-nav{
+    display: flex;
+    margin-left: 56%;
+}
+.description{
+
+}
+.des-1{
+    width: 100%;
+    flex-direction: row-reverse;
+}
+.img-div{
+    width: 56%;
+    margin-top: 1.7rem;
+    float: left;
+}
+.img-div img{
+    width: 20rem;
+    height: 20rem;   
+}
+.details5{
+  width: 42%;
+  float: right;
+}
+.mars-des{
+  width: 80%;
+}
+.mars-des p:first-child {
+   color: white;
+   font-size: 5.5pc;
+   font-family: 'Cinzel Decorative', cursive;
+   letter-spacing: 6px;
+   margin-top: 1rem;
+}
+.mars-des p:last-child{
+    color: rgb(212, 209, 209);
+    font-size: 1rem;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+.description .hr-line{
+    width: 80%;
+    height: .5px;
+    background-color: rgb(185, 181, 181);
+    margin-top: 2rem;
+}
+.distance-time{
+    display: flex;
+    margin-top: 2rem;
+    width: 80%;
+}
+.distance{
+
+}
+.distance p:first-child{
+    color: rgb(212, 209, 209);
+    font-size: .8rem;
+    font-family: 'Archivo Narrow', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.distance p:last-child{
+    color: rgb(212, 209, 209);
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.distance-time .time{
+  margin: auto;
+}
+.distance-time .time p:first-child{
+    color: rgb(212, 209, 209);
+    font-size: .8rem;
+    font-family: 'Archivo Narrow', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.distance-time .time p:last-child{
+    color: rgb(212, 209, 209);
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.hidebx{
+    display: none;
+}
+.select-btn{
+    height: 2rem;
+    width: auto;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    font-family: 'Saira Condensed', sans-serif;
+    letter-spacing: 2px; 
+}
+.borderbtm{
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+.active, .select-btn:hover {
+    border-bottom: 2px solid rgb(230, 230, 230);
+  }
+
+  @media (max-width:992px) {
+    body{
+        height: 100vh;
+        width: 100vw;
+        background-image: url('/assets/destination/background-destination-tablet.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+    }
+    nav .line{
+        display: none;
+    }
+    nav .home-icon{
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-left: 3rem;
+        margin-top:1.5rem;
+    }
+    nav ul{
+        justify-content: right;
+        width: 100%;
+        margin-left: 2rem;
+    }
+    nav ul li{
+        margin-right: 1rem;
+    }
+    ul li a{
+        font-size: 1rem;
+    }
+    ul li a span{
+        display: none;
+      }
+
+    .des-1{
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .details5{
+        width: 90%;
+        display: grid;
+        place-items: center;
+        margin: auto;
+      }
+    .img-div{
+        width: 100%;
+        margin-top: 3.7rem;
+        margin-bottom: 3rem;
+    } 
+    .img-div img{
+        width: 20rem;
+        height: 20rem;   
+    }
+    .mars-des p:first-child{
+        font-size: 4pc;
+    }
+    .distance-time{
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .distance-time .time{
+        margin: 0px;
+    }
+}
+
+@media (max-width:768px) {
+    body{
+        background-image: url("/assets/destination/background-destination-mobile.jpg");
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+    }
+    nav .home-icon{
+        width: 3.1rem;
+        height: 3.1rem;
+        margin-left: 2.7rem;
+        margin-top:2rem;
+    }
+    nav .line{
+        display: none;
+    }
+    nav .navbar-nav{
+       height: auto;
+    }
+    nav .navbar-nav{
+        margin: 0;
+    }
+    nav ul li{
+        height: 0rem;
+    }
+    .navbar-toggler{
+        height: 1.3rem;
+        width: auto;
+        margin-right: 2rem;
+    }
+    .destination-nav{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        margin-left: 0px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .destination-nav form{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .select-btn{
+        margin: 0px;
+    }
+    .details5{
+        width: 97%;
+    }
+}

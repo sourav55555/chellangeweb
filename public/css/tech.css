@@ -1,0 +1,328 @@
+
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('/assets/technology/background-technology-desktop.jpg');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navbar{
+   
+}
+.navbar-toggler{
+    background-image: url(/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: all .8s;
+}
+.navbar-toggler:focus{
+    background-image: url(/assets/shared/icon-close.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.navbar-toggler.collapsed{
+    background-image: url(/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+nav .home-icon{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 2rem;
+    margin-top:3rem;
+}
+.home-icon img{
+    height: 100%;
+    width: 100%;
+}
+nav .line{
+    width: 43%;
+    height: 0px;
+    border-top: .7px solid rgb(153, 151, 151);
+    margin-left: 3rem;
+    margin-top:3rem;
+}
+nav ul{
+    height: 6rem;
+    color: white;
+    position: relative;
+    width: auto;
+}
+nav ul::before{
+    content: "";
+    position: absolute;
+    background-image: url('/assets/crew/background-crew-desktop.jpg');
+    background-attachment: fixed;
+    filter: blur(11px);
+    height: 110%;
+    width: 100%;
+    z-index: 1;  
+  }
+nav ul li{
+    z-index: 2;
+    color: white;
+    display: grid;
+    place-items: center;
+    margin-left: 1rem;
+    margin-top: 3rem;
+}
+li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all .3s linear;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
+    z-index: 2;
+    letter-spacing: 1.7px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+ul li a span{
+  margin-right: .4rem;
+  padding: 0;
+  letter-spacing: 0;
+}
+.nav-link:hover{
+    color: white;
+}
+.nav-link{
+    color: white;
+    display: flex;
+}
+.tech-details .number{
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Saira Condensed', sans-serif;
+    letter-spacing: 2px;
+    margin-left: 5rem;
+    margin-top: 4rem;
+}
+.tech-details .number span{
+    margin-right: 1rem;
+}
+.hidebx{
+    display: none;
+}
+.spaces{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-top: 2rem;
+}
+.num-space{
+    width: 15%;
+}
+.num-space form{
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+.space-nav{
+    width: 85%;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 3rem;
+}
+.space-details{
+ 
+}
+.space-details .space-texts{
+    width: 50%;
+    color: white;
+   margin-top: 2rem;
+}
+.space-texts p:first-child{
+    font-size: 1.1rem;
+    font-family: 'Saira Condensed', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+.space-texts p:last-child{
+    font-size: 1rem;
+    color: rgb(214, 206, 206);
+    margin-top: 1rem;
+}
+.space-texts .l-text{
+    display: block;
+    font-size: 3.5pc;
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+}
+.space-details .space-img{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+}
+.space-img img{
+    width: 79%;
+height: 24rem;
+margin-top: -4rem;
+}
+.select-btn{
+    height: 3.4rem;
+    width: 3.4rem;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+    margin-top: 1.5rem;
+    margin-left: .7rem;
+    cursor: pointer;
+}
+.d-img{
+    display: block;
+}
+.m-img{
+    display: none;
+}
+@media (max-width:992px) {
+    body{
+        height: 100vh;
+        width: 100vw;
+        background-image: url('/assets/technology/background-technology-tablet.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+    }
+    nav .line{
+        display: none;
+    }
+    nav .home-icon{
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-left: 3rem;
+        margin-top:1.5rem;
+    }
+    nav ul{
+        justify-content: right;
+        width: 100%;
+        margin-left: 2rem;
+    }
+    nav ul li{
+        margin-right: 1rem;
+    }
+    ul li a{
+        font-size: 1rem;
+    }
+    ul li a span{
+        display: none;
+      }
+    .d-img{
+        display: none;
+    }
+    .m-img{
+        display: block;
+    }
+    .spaces{
+        display: flex;
+        flex-direction: column;
+    }
+    .num-space{
+        display: block;
+        width: 100%;
+    }
+    .num-space form{
+        flex-direction: row;
+    }
+    .space-img img{
+        width: 79%;
+    height: 24rem;
+    margin-top: 2rem;
+    }
+    .space-details{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    .space-details .space-texts{
+        width: 80%;
+        text-align: center;
+        
+    }
+    .space-details .space-img{
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .space-details .space-img img{
+        width: 90%;
+        height: auto;
+    }
+    .space-nav{
+        width: 100%;
+    }
+
+    }
+
+    @media (max-width:768px) {
+        body{
+            background-image: url("/assets/technology/background-technology-mobile.jpg");
+            height: 100vh;
+            width: 100vw;
+            background-size: cover;
+        }
+        nav .home-icon{
+            width: 3.1rem;
+            height: 3.1rem;
+            margin-left: 2.7rem;
+            margin-top:2rem;
+        }
+        nav .line{
+            display: none;
+        }
+        nav .navbar-nav{
+           height: auto;
+        }
+        nav .navbar-nav{
+            margin: 0;
+        }
+        nav ul li{
+            height: 0rem;
+        }
+        .navbar-toggler{
+            height: 1.3rem;
+            width: auto;
+            margin-right: 2rem;
+        }
+        .d-img{
+            display: none;
+        }
+        .m-img{
+            display: block;
+        }
+        .space-details .space-texts{
+            width: 93%;
+        }
+        .space-details .space-img{
+            
+        }
+        .space-details .space-img img{
+            width: 90%;
+            height: auto;
+        }
+    }
