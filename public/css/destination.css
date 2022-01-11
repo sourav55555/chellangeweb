@@ -232,7 +232,7 @@ ul li a span{
   @media (max-width:992px) {
     body{
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         background-image: url('/assets/destination/background-destination-tablet.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -298,9 +298,12 @@ ul li a span{
 @media (max-width:768px) {
     body{
         background-image: url("/assets/destination/background-destination-mobile.jpg");
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         background-size: cover;
+    }
+    nav{
+        position: relative;
     }
     nav .home-icon{
         width: 3.1rem;
@@ -317,8 +320,13 @@ ul li a span{
     nav .navbar-nav{
         margin: 0;
     }
+    nav ul{
+        position: absolute;
+        margin-left: 0;
+    }
     nav ul li{
-        height: 0rem;
+
+        margin-top: 1.3rem;
     }
     .navbar-toggler{
         height: 1.3rem;

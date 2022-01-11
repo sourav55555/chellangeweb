@@ -156,10 +156,10 @@ ul li a span{
 @media (max-width:992px) {
     body{
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         background-image: url('/assets/home/background-home-tablet.jpg');
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: cover;
         padding: 0;
         margin: 0;
     }
@@ -216,8 +216,11 @@ ul li a span{
     body{
         background-image: url(/assets/home/background-home-mobile.jpg);
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         background-size: cover;
+    }
+    nav{
+        position: relative;
     }
     nav .home-icon{
         width: 3.1rem;
@@ -235,6 +238,13 @@ ul li a span{
         height: 1.3rem;
         width: auto;
         margin-right: 2rem;
+    }
+    nav ul{
+        margin-left: 0;
+        position: absolute;
+    }
+    nav ul li{
+        margin-top: 1.3rem;
     }
     .texts{
         padding: 0rem; 
